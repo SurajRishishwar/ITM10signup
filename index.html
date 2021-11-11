@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab - Update by Fantacy Design -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Signup Form </title>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    </head>
+<body>
+  <div class="forimg">
+  <div class="container">
+    <div class="title">Signup Here</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Father's Name</span>
+            <input type="text" placeholder="Enter Father's Name " required>
+          </div>
+          <div class="input-box">
+            <span class="details">Mother's Name</span>
+            <input type="text" placeholder="Enter Father's Name " required>
+          </div>
+        
+          <div class="input-box">
+            <span class="details">Course</span>
+            
+            <select   id='firstList' name='firstList' onClick="getItem()">
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Branch</span>
+            <select   id='secondList' name='secondList' >
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Gender</span>
+            <!-- <input type="text" placeholder="Confirm your password" required> -->
+            <select name="gender" class="" required>
+              <option value="n" selected>Select Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="o">Prefer Not to say</option>
+            </select>
+          </div>
+         
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your phoneNumber" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" required>
+          </div>
+        
+        
+        <!-- <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">other</span>
+            </label>
+          </div>
+        </div>-->
+        </div>
+        <div class="button"> 
+          <input type="submit" value="Signin">
+        </div>
+      </form>
+       <div class="signup">Already Have An Account?
+          <a href="#">login</a>
+        
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+        
+		
+  var list1 = document.getElementById('firstList');
+
+  list1.options[0] = new Option('Select Course ', '');
+  list1.options[1] = new Option('B-Tech', 'B-Tech');
+  list1.options[2] = new Option('M-Tech', 'M-Tech');
+
+
+
+function getItem(){
+  var list1 = document.getElementById('firstList');
+  var list2 = document.getElementById("secondList");
+  var list1SelectedValue = list1.options[list1.selectedIndex].value;
+  
+  if (list1SelectedValue=='B-Tech')
+  {
+      
+      list2.options.length=0;
+      list2.options[0] = new Option('Select Branch', '');
+      list2.options[1] = new Option('cse', 'cse');
+      list2.options[2] = new Option('it', 'it');
+      list2.options[3] = new Option('ece', 'ece');
+      list2.options[4] = new Option('me', 'me');
+     
+      
+  }
+  else if (list1SelectedValue=='M-Tech')
+  {
+      
+      list2.options.length=0;
+      list2.options[0] = new Option('Select Branch', '');
+      list2.options[1] = new Option('se', 'se');
+      list2.options[2] = new Option('pe', 'pe');
+    
+      
+  }
+}
+</script>
+</body>
+</html>
